@@ -93,7 +93,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public void deleteUsers(List<Long> ids) {
-        log.info("Users deleted ids: {}", String.join(", ", (CharSequence) ids));
+        log.info("Users deleted ids: {}", ids);
         if (isNotEmpty(ids)) {
             userRepository.deleteAllByIdIn(ids);
         }
@@ -109,7 +109,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public void blockUsers(List<Long> ids) {
-        log.info("Users blocked ids: {}", String.join(", ", (CharSequence) ids));
+        log.info("Users blocked ids: {}", ids);
         if (isNotEmpty(ids)) {
             ids.forEach(id -> {
                 UserEntity user = userRepository.findById(id).get();
@@ -129,7 +129,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public void unblockUsers(List<Long> ids) {
-        log.info("Users unblocked ids: {}", String.join(", ", (CharSequence) ids));
+        log.info("Users unblocked ids: {}", ids);
         if (isNotEmpty(ids)) {
             ids.forEach(id -> {
                 UserEntity user = userRepository.findById(id).get();

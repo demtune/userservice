@@ -34,7 +34,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/delete/ids")
+    @PostMapping("/delete")
     public ResponseEntity<?> deleteUsersByIds(@RequestParam List<Long> ids) {
         userService.deleteUsers(ids);
         return ResponseEntity.ok().build();
@@ -46,7 +46,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/block/ids")
+    @PostMapping("/block")
     public ResponseEntity<?> blockUsersByIds(@RequestParam List<Long> ids) {
         userService.blockUsers(ids);
         return ResponseEntity.ok().build();
@@ -58,7 +58,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/unblock/ids")
+    @PostMapping("/unblock")
     public ResponseEntity<?> unblockUsersByIds(@RequestParam List<Long> ids) {
         userService.unblockUsers(ids);
         return ResponseEntity.ok().build();
