@@ -10,13 +10,12 @@ api/users/,
 
 api/users/delete/{id}
 
-api/users/delete/ids,
+api/users/delete?ids=,
 
 api/users/block/{id}
 
-api/users/block/ids,
+api/users/block?ids=,
 
 api/users/unblock/{id}
 
-api/users/unblock/ids
-
+api/users/unblock?ids=
